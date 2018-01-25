@@ -12,7 +12,7 @@ public class ReadJson : MonoBehaviour {
 		foreach (var pos in jo.infoList) 
 		{
 			Vector3 position = new Vector3 (pos.xpos, 0, pos.ypos);
-			Instantiate (cube, position, Quaternion.identity);
+			 
 		}
 	}
 	
