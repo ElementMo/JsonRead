@@ -9,8 +9,8 @@ public class ReadXML : MonoBehaviour {
 	public GameObject cube;
 
 
-	int x=0;
-	int z=0;
+	float x=0;
+	float z=0;
 
 	// Use this for initialization
 	void Start () 
@@ -24,16 +24,14 @@ public class ReadXML : MonoBehaviour {
 			{
 				if (xAndy.Name == "xpos") 
 				{
-					x = int.Parse(xAndy.InnerText);
-					Debug.Log (x);
+					x = float.Parse(xAndy.InnerText);
 				}
 				if (xAndy.Name == "ypos") 
 				{
-					z = int.Parse(xAndy.InnerText);
-					Debug.Log (z);
+					z = float.Parse(xAndy.InnerText);
 				}
 			}
-			Vector3 position = new Vector3 (x, 0, z);
+			Vector3 position = new Vector3 (x, 0, 4000-z);
 			Instantiate (cube, position, Quaternion.identity);
 		}
 	}
